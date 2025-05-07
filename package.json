@@ -1,15 +1,22 @@
 {
   "name": "javascript-calculator",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "dependencies": {
-    "typescript": "^5.7.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlashingFuture/javascript-calculator.git"
   },
-  "devDependencies": {
-    "@jest/globals": "^29.7.0",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.5"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlashingFuture/javascript-calculator/issues"
+  },
+  "homepage": "https://github.com/FlashingFuture/javascript-calculator#readme",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0"
   }
 }
