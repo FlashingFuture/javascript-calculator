@@ -14,7 +14,7 @@ function divide(a, b) {
   return a / b;
 }
 
-function performOperation(a, operator, b) {
+export function performOperation(a, operator, b) {
   switch (operator) {
     case "+":
       return add(a, b);
@@ -28,5 +28,3 @@ function performOperation(a, operator, b) {
       throw new Error("연산자가 입력되어야 합니다.");
   }
 }
-
-module.exports = { performOperation };

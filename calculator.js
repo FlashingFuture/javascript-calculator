@@ -1,8 +1,8 @@
-const { tokenize } = require("./tokenizer");
-const { validateExpression } = require("./validator");
-const { evaluateTokens } = require("./evaluator");
+import { tokenize } from "./tokenizer.js"
+import { validateExpression } from "./validator.js"
+import { evaluateTokens } from "./evaluator.js"
 
-function calculate(expression) {
+export function calculate(expression) {
   try {
     const validatedExpression = validateExpression(expression);
     const tokens = tokenize(validatedExpression);
@@ -12,5 +12,3 @@ function calculate(expression) {
     throw error;
   }
 }
-
-module.exports = { calculate };

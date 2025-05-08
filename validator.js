@@ -1,4 +1,4 @@
-function validateExpression(expression) {
+export function validateExpression(expression) {
   if (typeof expression !== "string") {
     throw new Error("문자열을 입력해 주세요.");
   }
@@ -19,5 +19,3 @@ function validateExpression(expression) {
 
   return processedExpression;
 }
-
-module.exports = { validateExpression };
