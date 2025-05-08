@@ -1,4 +1,4 @@
-function tokenize(expression) {
+export function tokenize(expression) {
   const tokens = [];
   let currentNumber = "";
   for (let i = 0; i < expression.length; i++) {
@@ -21,12 +21,10 @@ function tokenize(expression) {
   return tokens;
 }
 
-function isDigit(char) {
+export function isDigit(char) {
   return /[0-9]/.test(char);
 }
 
-function isOperator(char) {
+export function isOperator(char) {
   return "+-x/".includes(char);
 }
-
-module.exports = { tokenize, isDigit, isOperator };

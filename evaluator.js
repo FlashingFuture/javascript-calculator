@@ -1,6 +1,6 @@
-const { performOperation } = require("./operators");
+import { performOperation } from "./operators.js"
 
-function calculateHighPriority(tokens) {
+export function calculateHighPriority(tokens) {
   const result = [];
   result.push(tokens[0]);
   for (let i = 1; i < tokens.length; i += 2) {
@@ -23,7 +23,7 @@ function calculateHighPriority(tokens) {
   return result;
 }
 
-function calculateLowPriority(tokens) {
+export function calculateLowPriority(tokens) {
   let result = tokens[0];
   for (let i = 1; i < tokens.length; i += 2) {
     const operator = tokens[i];
@@ -34,7 +34,7 @@ function calculateLowPriority(tokens) {
   return result;
 }
 
-function evaluateTokens(tokens) {
+export function evaluateTokens(tokens) {
   if (tokens.length === 0) {
     throw new Error("토큰이 비어있습니다.");
   }
@@ -54,5 +54,3 @@ function evaluateTokens(tokens) {
   const highPriorityResult = calculateHighPriority(tokens);
   return calculateLowPriority(highPriorityResult);
 }
-
-module.exports = { evaluateTokens };
