@@ -78,9 +78,14 @@ function handleDotInput() {
   } else if (expression === "" || expression.endsWith(" ")) {
     expression += "0";
   }
-  expression += ".";
-}
 
+  const parts = expression.split(" ");
+  const currentNumber = parts[parts.length - 1];
+
+  if (!currentNumber.includes(".")) {
+    expression += ".";
+  }
+}
 function handleNumberInput(clickedInput) {
   if (calculationDone) {
     expression = "";
