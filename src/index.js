@@ -1,4 +1,4 @@
-import { calculate } from "./src/core/calculator.js";
+import { calculate } from "./core/calculator.js";
 
 let expression = "";
 let result = "";
