@@ -1,4 +1,4 @@
-const { isOperator, tokenize } = require("./tokenizer.js");
+import { isOperator, tokenize } from "../core/tokenizer.js";
 
 describe("isOperator Test", () => {
   test("+ 테스트", () => {

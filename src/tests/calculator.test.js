@@ -1,4 +1,4 @@
-const { calculate } = require("./calculator");
+import { calculate } from "../core/calculator";
 
 describe("calculate Test", () => {
   test("3 + 5 x 2.4", () => {

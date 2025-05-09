@@ -1,4 +1,4 @@
-const { validateExpression } = require("./validator.js");
+import { validateExpression } from "../core/validator.js";
 
 describe("validateExpression", () => {
   test("3 + 2 x 4", () => {

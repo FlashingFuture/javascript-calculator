@@ -1,4 +1,4 @@
-import { performOperation } from "./operators.js"
+import { performOperation } from "./operators.js";
 
 export function calculateHighPriority(tokens) {
   const result = [];

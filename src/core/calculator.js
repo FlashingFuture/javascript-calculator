@@ -1,6 +1,6 @@
-import { tokenize } from "./tokenizer.js"
-import { validateExpression } from "./validator.js"
-import { evaluateTokens } from "./evaluator.js"
+import { tokenize } from "./tokenizer.js";
+import { validateExpression } from "./validator.js";
+import { evaluateTokens } from "./evaluator.js";
 
 export function calculate(expression) {
   try {

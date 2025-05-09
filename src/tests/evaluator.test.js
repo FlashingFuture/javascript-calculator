@@ -1,4 +1,4 @@
-const { evaluateTokens } = require("./evaluator.js");
+import { evaluateTokens } from "../core/evaluator.js";
 
 describe("evaluateTokens Test", () => {
   test("[]", () => {
