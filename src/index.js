@@ -9,10 +9,19 @@ const resultDiv = document.querySelector(".result");
 const expressionDiv = document.querySelector(".expression");
 
 keypad.addEventListener("click", (event) => {
-  let clickedInput = event.target.textContent;
+  const clickedInput = event.target.textContent;
 
   handleInput(clickedInput);
   expressionDiv.textContent = expression;
+});
+
+document.addEventListener("keydown", (event) => {
+  const typedInput = normalizeKeyboardInput(event.key);
+
+  if ("0123456789.+-x÷<=".includes(typedInput)) {
+    handleInput(typedInput);
+    expressionDiv.textContent = expression;
+  }
 });
 
 function handleInput(clickedInput) {
@@ -29,6 +38,14 @@ function handleInput(clickedInput) {
   } else {
     handleNumberInput(clickedInput);
   }
+}
+
+function normalizeKeyboardInput(typedInput) {
+  if (typedInput === "Backspace") return "<";
+  if (typedInput === "Enter") return "=";
+  if (typedInput === "*") return "x";
+  if (typedInput === "/") return "÷";
+  return typedInput;
 }
 
 function performCalculation() {
@@ -86,6 +103,7 @@ function handleDotInput() {
     expression += ".";
   }
 }
+
 function handleNumberInput(clickedInput) {
   if (calculationDone) {
     expression = "";
